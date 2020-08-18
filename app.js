@@ -114,7 +114,8 @@ function deleteTodo(key){
         ...todoList[index]
     }
 
-    todoList = todoList.filter(item => item.id !== todo.id)
+    todoList = todoList.filter(item => item.id !== todo.id);
+    localStorage.setItem('todoListRef', JSON.stringify(todoList));
     renderTodo(todo);
 
 }
