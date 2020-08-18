@@ -1,6 +1,7 @@
 
 let todoList = [];
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const ref = localStorage.getItem('todoListRef');
     if (ref) {
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderTodo(t);
         });
     }
-  });
+});
 
 
 function addTodo(text){
@@ -20,7 +21,7 @@ function addTodo(text){
     };
 
     todoList.push(todo);
-    //console.log(todoList);
+    console.log(todoList);
 
     //passo2
     renderTodo(todo);
